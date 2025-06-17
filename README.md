@@ -26,6 +26,7 @@ Foi utilizado o PostgreSQL tanto de forma local (offline) quanto em uma instânc
 - **AWS S3**: Armazenamento em camadas (raw, staging e output).
 - **Athena**: Consulta de dados diretamente do S3 e exportação de resultados.
 - **Terraform**: Para provisionamento da infraestrutura em nuvem.
+- **MongoDB**: Para identificar contratos de risco, que estavam no formato json. (É uma etapa opcional)
 - **QuickSight**: Ferramenta para visualização dos resultados
 
 ## Perguntas que foram respondidas
