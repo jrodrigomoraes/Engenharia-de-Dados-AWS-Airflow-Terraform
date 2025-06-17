@@ -39,3 +39,16 @@ Após tratar os dados com PySpark, utilizei Athena para responder questões sobr
 - Quais clientes locaram quais veículos?
 - Tempo médio de locação por modelo
 - Cliente mais fiel (que mais alugou)
+
+## Pipeline de Dados
+
+O pipeline de dados seguiu o seguinte fluxo:
+- **Ingestão**: Dados brutos extraídos de um banco PostgreSQL local e do Amazon RDS.
+- **Transformação**: Uso de PySpark para limpar, normalizar e criar tabelas fato e dimensões.
+-  **Armazenamento**:
+   - Camada `raw`: Dados brutos
+   - Camada `staging`: Dados organizados por dimensão
+   - Camada `output`: Resultados de queries salvos via Athena para BI
+- **Orquestração**: Apache Airflow executando DAGs para automação e movimentação dos dados.
+- **Identificação de Contratos de Risco**: Uso de MongoDB para visualização de dados em arquivos semi-estruturados
+- **Visualização de Dados**: Utilizado ferramentas de BI(aqui pode ser a da sua preferência) para visualizar as bases criadas com Athena.
