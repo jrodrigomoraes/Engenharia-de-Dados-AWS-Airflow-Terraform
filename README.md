@@ -71,3 +71,7 @@ Os scripts estão organizados nas pastas `src`, `scripts` e `sql`. Seus objetivo
 ## Outputs
 
 Dados prontos para ser utilizados em ferramentas de BI, optei por `Amazon QuickSight` por conta da integração com o ambiente AWS.
+
+## Terraform
+
+A infraestrutura básica foi provisionada com Terraform, facilitando a automação e escalabilidade do ambiente analítico com boas práticas de Infrastructure as Code (IaC). Este projeto também está sendo utilizado como parte do meu aprendizado de Terraform.
