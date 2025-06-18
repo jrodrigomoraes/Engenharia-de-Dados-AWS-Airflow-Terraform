@@ -66,7 +66,7 @@ Os scripts estão organizados nas pastas `src`, `scripts` e `sql`. Seus objetivo
 - Geração de dados com `Faker` e inserção no banco
 - Respostas a perguntas de negócio com queries SQL
 - `DAGs do Airflow` para automatização da movimentação entre camadas
-- Código para leitura de contratos em JSON via MongoDB e identificação de contratos de risco
+- Código para leitura de contratos em JSON via `MongoDB` e identificação de contratos de risco
 
 ## Outputs
 
