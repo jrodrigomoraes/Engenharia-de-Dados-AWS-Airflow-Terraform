@@ -14,6 +14,7 @@ Este projeto simula a criação de um pipeline de dados completo para uma empres
 - **Fato:** Locações realizadas
 - **Dimensões:** Clientes, veículos, despachantes, tempo
 - Dados exportados no formato Parquet e armazenados no Amazon S3
+- **Observação:** Os dados foram gerados artificialmente com a biblioteca Faker do Python para simular um cenário realista.
 
 ## Arquitetura
 
@@ -52,3 +53,21 @@ O pipeline de dados seguiu o seguinte fluxo:
 - **Orquestração**: Apache Airflow executando DAGs para automação e movimentação dos dados.
 - **Identificação de Contratos de Risco**: Uso de MongoDB para visualização de dados em arquivos semi-estruturados
 - **Visualização de Dados**: Utilizado ferramentas de BI(aqui pode ser a da sua preferência) para visualizar as bases criadas com Athena.
+
+## Failures
+
+Detalhamento de um erro encontrado durante o projeto. Erros que podem acontecer em um pipeline real.
+
+## Scripts
+
+Os scripts estão organizados nas pastas `src`, `scripts` e `sql`. Seus objetivos incluem:
+- Criação do Banco de Dados e Tabelas
+- Criação de um `job Spark` para transformação dos dados
+- Geração de dados com `Faker` e inserção no banco
+- Respostas a perguntas de negócio com queries SQL
+- `DAGs do Airflow` para automatização da movimentação entre camadas
+- Código para leitura de contratos em JSON via MongoDB e identificação de contratos de risco
+
+## Outputs
+
+Dados prontos para ser utilizados em ferramentas de BI, optei por `Amazon QuickSight` por conta da integração com o ambiente AWS.
